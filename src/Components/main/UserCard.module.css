@@ -1,0 +1,20 @@
+.card {
+  width: 200px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #950808;
+  border-radius: 5px;
+  box-shadow: 7px 3px 3px rgb(0, 140, 255);
+}
+
+.email {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.name {
+  text-align: center;
+}

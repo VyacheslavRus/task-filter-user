@@ -1,10 +1,15 @@
 import { combineReducers, createReducer } from "@reduxjs/toolkit";
-import { getUsersAction } from "./usersActions";
+import { getStorageUsersAction, getUsersAction } from "./usersActions";
 
 const getUsersReducer = createReducer([], {
-  [getUsersAction]: (state, { payload }) => payload,
+  [getUsersAction]: (_, { payload }) => payload,
+});
+
+const getStoragePeople = createReducer("", {
+  [getStorageUsersAction]: (_, { payload }) => payload,
 });
 
 export const usersReducer = combineReducers({
   users: getUsersReducer,
+  storageUsers: getStoragePeople,
 });
